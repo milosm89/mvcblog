@@ -1,0 +1,60 @@
+.blog-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+
+    @media (max-width: 720px) {
+        width: 90%;
+    }
+
+    .btn-holder {
+        display: flex;
+        justify-content: end;
+    }
+
+    a {
+        text-decoration: none;
+        background-color: green;
+        padding: 8px;
+        color: white;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .posts {
+        width: 100%;
+        height: auto;
+
+        h3 {
+            font-size: 18px;
+        }
+        .text-wrap{
+            width: 100%;
+            max-height:150px;
+            overflow: hidden;
+
+            p {
+                line-height: 20px;
+            }
+        }
+
+        .del-btn {
+            background-color: red;
+            margin: 0px 10px;
+        }
+
+        .read-btn {
+            background-color: blue;
+            margin-right: 10px;
+        }
+
+        hr {
+            margin: 10px 0px;
+        }
+    }
+}

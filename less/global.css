@@ -1,0 +1,323 @@
+.nav-bar {
+  background-color: #333;
+  display: flex;
+  justify-content: end;
+}
+@media (max-width: 480px) {
+  .nav-bar {
+    display: none;
+  }
+}
+.nav-bar p {
+  color: white;
+  padding-left: 10px;
+  display: flex;
+  width: 50%;
+  margin: 14px 0px;
+}
+.nav-bar-mobile {
+  display: none;
+  background-color: #333;
+}
+@media (max-width: 480px) {
+  .nav-bar-mobile {
+    display: block;
+  }
+}
+.nav-bar-mobile .icon-wrap {
+  display: flex;
+  justify-content: end;
+}
+.nav-bar-mobile .bars-icon {
+  display: block;
+  color: white;
+  padding: 7px 10px 7px 0px;
+  text-align: end;
+  align-self: center;
+  padding-right: 20px;
+}
+.nav-bar-mobile .close-icon {
+  display: none;
+  color: white;
+  padding: 7px 10px 7px 0px;
+  text-align: end;
+  align-self: center;
+  padding-right: 20px;
+}
+.nav-bar-mobile .hide {
+  display: none;
+}
+.nav-bar-mobile .show {
+  display: block;
+}
+.nav-bar-mobile .dropdown-menu {
+  display: none;
+}
+.nav-bar-mobile .welcome-text {
+  color: white;
+  text-align: center;
+}
+.nav-bar-mobile ul {
+  display: block;
+  width: 100%;
+}
+.nav-bar-mobile li {
+  display: block;
+  text-align: center;
+}
+ul {
+  display: flex;
+  justify-content: end;
+  width: 50%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+.blog-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+}
+@media (max-width: 720px) {
+  .blog-wrapper {
+    width: 90%;
+  }
+}
+.blog-wrapper .btn-holder {
+  display: flex;
+  justify-content: end;
+}
+.blog-wrapper a {
+  text-decoration: none;
+  background-color: green;
+  padding: 8px;
+  color: white;
+  border-radius: 4px;
+  display: inline-block;
+}
+.blog-wrapper h2 {
+  font-size: 28px;
+  text-align: center;
+}
+.blog-wrapper .posts {
+  width: 100%;
+  height: auto;
+}
+.blog-wrapper .posts h3 {
+  font-size: 18px;
+}
+.blog-wrapper .posts .text-wrap {
+  width: 100%;
+  max-height: 150px;
+  overflow: hidden;
+}
+.blog-wrapper .posts .text-wrap p {
+  line-height: 20px;
+}
+.blog-wrapper .posts .del-btn {
+  background-color: red;
+  margin: 0px 10px;
+}
+.blog-wrapper .posts .read-btn {
+  background-color: blue;
+  margin-right: 10px;
+}
+.blog-wrapper .posts hr {
+  margin: 10px 0px;
+}
+.create-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .create-wrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 720px) {
+  .create-wrapper {
+    width: 90%;
+  }
+}
+.create-wrapper h4 {
+  font-size: 28px;
+}
+@media (max-width: 720px) {
+  .create-wrapper h4 {
+    font-size: 20px;
+  }
+}
+.create-wrapper textarea {
+  width: 80%;
+  box-sizing: border-box;
+  min-height: 200px;
+  resize: none;
+  border: 1px solid #000;
+  padding: 5px;
+  border-radius: 4px;
+}
+@media (max-width: 1024px) {
+  .create-wrapper textarea {
+    width: 90%;
+  }
+}
+@media (max-width: 720px) {
+  .create-wrapper textarea {
+    width: 100%;
+  }
+}
+.create-wrapper button {
+  margin-top: 30px;
+}
+.post-wrapper {
+  padding-top: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .post-wrapper {
+    width: 90%;
+  }
+}
+.post-wrapper .wrap {
+  display: flex;
+  justify-content: end;
+}
+.post-wrapper h2 {
+  font-size: 28px;
+  text-align: center;
+}
+@media (max-width: 720px) {
+  .post-wrapper h2 {
+    font-size: 20px;
+  }
+}
+.post-wrapper p {
+  font-size: 16px;
+  text-align: left;
+  color: #000;
+  width: 100%;
+  line-height: 20px;
+}
+.post-wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: green;
+  padding: 8px;
+  color: white;
+  border-radius: 4px;
+}
+.post-wrapper .create-btn {
+  justify-content: end;
+}
+.post-wrapper .del-btn {
+  background-color: red;
+  margin: 0px 10px;
+}
+.post-wrapper .read-btn {
+  background-color: blue;
+  margin-right: 10px;
+}
+body {
+  margin: 0px;
+}
+.welcome {
+  height: calc(100vh - 46px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome h2 {
+  font-size: 30px;
+}
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+@media (max-width: 720px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+.wrapper .index-login-signup p {
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .wrapper input {
+    width: 100%;
+  }
+}
+.wrapper .index-login-signup button,
+.wrapper .index-login-login button {
+  margin-top: 20px;
+}
+h4 {
+  text-align: center;
+  font-size: 25px;
+}
+@media (max-width: 1024px) {
+  h4 {
+    font-size: 20px;
+  }
+}
+form {
+  text-align: center;
+}
+input {
+  width: 80%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 5px;
+}
+@media (max-width: 1024px) {
+  input {
+    width: 90%;
+  }
+}
+@media (max-width: 720px) {
+  input {
+    width: 100%;
+  }
+}
+input:focus-visible {
+  outline: 0px;
+}
+button {
+  background-color: green;
+  color: white;
+  padding: 6px 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  border: none;
+}
+.edit-list {
+  position: relative;
+  height: 35px;
+}
+.logout-btn {
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  right: 10px;
+}
