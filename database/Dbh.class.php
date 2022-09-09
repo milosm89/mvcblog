@@ -3,9 +3,9 @@
 //Database connection.
 class Dbh {
 
-    private $host = "localhost";
+    private $host = "db";
     private $username = "root";
-    private $password = "";
+    private $password = "secret";
     private $database = "mvc";
 
     protected function connect() {

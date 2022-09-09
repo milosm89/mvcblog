@@ -4,9 +4,9 @@ require "Dbh.class.php";
 
 class CheckTables extends Dbh {
 
-    private $host = "localhost";
+    private $host = "db";
     private $username = "root";
-    private $password = "";
+    private $password = "secret";
     private $database = "mvc";
 
     /* Automatically create tables if not exists in database.*/
@@ -17,15 +17,16 @@ class CheckTables extends Dbh {
 
             $dbh = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->database . '', $this->username, $this->password);
             $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-      
+            
             $sql = "CREATE table users (
-                    id INT( 11 ) AUTO_INCREMENT PRIMARY KEY,
-                    username VARCHAR( 50 ) NOT NULL, 
-                    email VARCHAR( 50 ) NOT NULL, 
-                    password VARCHAR( 255 ) NOT NULL
+                id INT( 11 ) AUTO_INCREMENT PRIMARY KEY,
+                username VARCHAR( 50 ) NOT NULL, 
+                email VARCHAR( 50 ) NOT NULL, 
+                password VARCHAR( 255 ) NOT NULL
             );";
+
+            $dbh->exec($sql);        
                
-               $dbh->exec($sql);
 		}
 
         if ($this->postsExists() == true) {
