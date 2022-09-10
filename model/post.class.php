@@ -40,7 +40,7 @@ class Post extends Dbh {
     // List all posts. 
     protected function show() {
 
-        $sql = "SELECT * FROM posts ORDER BY created_at DESC";
+        $sql = "SELECT * FROM posts ORDER BY created_at ASC";
         $stmt = $this->connect()->query($sql);
 
         if (!$stmt->execute()) {
