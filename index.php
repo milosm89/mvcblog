@@ -1,8 +1,11 @@
 <?php
 session_start(); 
 require "database/checktables.class.php";
+require "database/seeders/seeder.class.php";
 $tables = new CheckTables;
 $tables->createTables();
+$seed = new DummyData;
+$seed->fakeData();
 ?>
 
 <!DOCTYPE html>
