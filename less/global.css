@@ -136,6 +136,12 @@ li a:hover {
 .blog-wrapper .posts hr {
   margin: 10px 0px;
 }
+.blog-wrapper .posts:last-child {
+  margin-bottom: 10px;
+}
+.blog-wrapper .posts:last-child hr {
+  display: none;
+}
 .create-wrapper {
   width: 70%;
   margin: 0 auto;
