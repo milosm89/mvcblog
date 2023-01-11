@@ -3,10 +3,19 @@
 //Database connection.
 class Dbh {
 
-    private $host = "db";
-    private $username = "root";
-    private $password = "secret";
-    private $database = "mvc";
+    protected $host;
+    protected $user;
+    protected $password;
+    protected $database;
+
+    public function __construct($host, $user, $password, $database) {
+
+        $this->host = $host;
+        $this->user = $user;
+        $this->password = $password;
+        $this->database = $database;
+        
+    }
 
     protected function connect() {
 

@@ -56,11 +56,12 @@ session_start();
 </div>
 	<?php 
 	if (isset($_SESSION['userid'])) { 
+		require "../env.php";
 		require "../database/Dbh.class.php";
 		require "../model/post.class.php";
 		require "../controller/post.contr.php";
 		$id = $_GET['id'];
-		$edit = new PostContr;
+		$edit = new PostContr($host, $user, $password, $database);
 		$result = $edit->singlePost($id); 
 		?>
 		<div class="create-wrapper">

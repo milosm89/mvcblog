@@ -2,18 +2,26 @@
 
 class SignUpContr extends Signup  {
 
-    private $username;
-    private $email;
-    private $pwd;
-    private $pwdRepeat;
+    protected $username;
+    protected $email;
+    protected $pwd;
+    protected $pwdRepeat;
+    protected $host;
+    protected $user;
+    protected $password;
+    protected $database;
 
+    public function __construct($username, $email, $pwd, $pwdRepeat, $host, $user, $password, $database) {
 
-    public function __construct($name, $email, $pwd, $pwdRepeat) {
-
-        $this->username = $name;
+        $this->username = $username;
         $this->email = $email;
         $this->pwd = $pwd;
         $this->pwdRepeat = $pwdRepeat;
+        $this->host = $host;
+        $this->user = $user;
+        $this->password = $password;
+        $this->database = $database;
+        
     }
 
    // This function call setUser() in model.

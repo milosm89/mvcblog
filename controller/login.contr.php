@@ -2,13 +2,22 @@
 
 class LoginContr extends Login {
 
-    private $username;
-    private $pwd;
+    protected $username;
+    protected $pwd;
+    protected $host;
+    protected $user;
+    protected $password;
+    protected $database;
 
-    public function __construct($username, $pwd) {
+    public function __construct($username, $pwd, $host, $user, $password, $database) {
 
         $this->username = $username;
         $this->pwd = $pwd;
+        $this->host = $host;
+        $this->user = $user;
+        $this->password = $password;
+        $this->database = $database;
+        
     }
 
     // This function call getUser() in model.

@@ -3,10 +3,11 @@ session_start();
 require "layouts/header.php";
 ?>
 <?php 
+    require "../env.php";
     require "../database/Dbh.class.php";
     require "../model/post.class.php";
     require "../controller/post.contr.php";
-    $data = new PostContr;
+    $data = new PostContr($host, $user, $password, $database);
     $results = $data->showPost();  
 ?>
 <div class="blog-wrapper">

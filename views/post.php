@@ -17,11 +17,12 @@ session_start();
 </head>
 <body>
         <?php
+			require "../env.php";
 			require "../database/Dbh.class.php";
 			require "../model/post.class.php";
 			require "../controller/post.contr.php";
 			$id = $_GET['id'];
-			$show = new PostContr;
+			$show = new PostContr($host, $user, $password, $database);
 			$result = $show->singlePost($id); 
 		?>
 	<div class="nav-bar">

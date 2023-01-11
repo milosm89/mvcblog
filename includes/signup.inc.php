@@ -7,11 +7,12 @@ if (isset($_POST['submit'])) {
 	$pwd = $_POST['pwd'];
 	$pwdRepeat = $_POST['pwdrepeat'];
 
+	require "../env.php";
 	require "../database/Dbh.class.php";
 	require "../model/signup.class.php";
 	require "../controller/signup.contr.php";
 
-	$signup = new SignUpContr( $username, $email, $pwd, $pwdRepeat);
+	$signup = new SignUpContr( $username, $email, $pwd, $pwdRepeat, $host, $user, $password, $database);
 	$signup->signUpUser();
 
 	echo "<script type='text/javascript'>;

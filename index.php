@@ -1,10 +1,12 @@
 <?php
 session_start(); 
-require "database/checktables.class.php";
+require "env.php";
+require "database/Dbh.class.php";
+require "database/maketables.class.php";
 require "database/seeders/seeder.class.php";
-$tables = new CheckTables;
+$tables = new MakeTables($host, $user, $password, $database);
 $tables->createTables();
-$seed = new DummyData;
+$seed = new DummyData($host, $user, $password, $database);
 $seed->fakeData();
 ?>
 

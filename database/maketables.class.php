@@ -2,12 +2,7 @@
 
 require "Dbh.class.php";
 
-class CheckTables extends Dbh {
-
-    private $host = "db";
-    private $username = "root";
-    private $password = "secret";
-    private $database = "mvc";
+class MakeTables extends Dbh {
 
     /* Automatically create tables if not exists in database.*/
 
