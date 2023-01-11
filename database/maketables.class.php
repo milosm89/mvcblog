@@ -1,7 +1,5 @@
 <?php
 
-require "Dbh.class.php";
-
 class MakeTables extends Dbh {
 
     /* Automatically create tables if not exists in database.*/
@@ -10,7 +8,7 @@ class MakeTables extends Dbh {
 
         if ($this->usersExists() == true) {
 
-            $dbh = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->database . '', $this->username, $this->password);
+            $dbh = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->database . '', $this->user, $this->password);
             $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
             
             $sql = "CREATE table users (
@@ -26,7 +24,7 @@ class MakeTables extends Dbh {
 
         if ($this->postsExists() == true) {
 
-            $dbh = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->database . '', $this->username, $this->password);
+            $dbh = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->database . '', $this->user, $this->password);
             $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
             $sql =  "CREATE table posts (
