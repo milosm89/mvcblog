@@ -1,7 +1,8 @@
 <?php 
+#Environment variables
 
-$host = "localhost";
+$host = "db";
 $user = "root";
-$password = "";
+$password = "secret";
 $database = "mvc";
 
