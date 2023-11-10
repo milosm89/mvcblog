@@ -23,6 +23,9 @@ require "layouts/header.php";
 				<input type="password" name="pwd" placeholder="Password">
 				<br>
 				<button type="submit" name="submit">LOGIN</button>
+				<div class="login-info">
+					You may login with: <strong>admin/123 </strong>
+				</div>
 			</form>
 		</div>
 	</div>
