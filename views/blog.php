@@ -8,14 +8,16 @@ require "layouts/header.php";
     require "../model/post.class.php";
     require "../controller/post.contr.php";
     $data = new PostContr($host, $user, $password, $database);
-    $results = $data->showPost();  
+    $results = $data->showPost();
+ 
 ?>
 <div class="blog-wrapper">
     <h2>Posts</h2>
     <div class="btn-holder">
-    <?php 
-      if (isset($_SESSION['userid'])) { ?>
-        <a href="create.php">Create Post</a>
+      <?php 
+        if (isset($_SESSION['userid'])) { ?>
+          <a href="create.php">Create Post</a>
+          <a style="background: red; margin-left: 20px;" class="del-btn" href="../includes/delete_user.inc.php?id=<?php echo $_SESSION['userid']; ?>" >Delete Account</a>
       <?php } ?>
     </div>
     <?php 
